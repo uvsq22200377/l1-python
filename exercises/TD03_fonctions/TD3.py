@@ -30,22 +30,49 @@ def affichePluriel(nombre,mot):
     """ affiche le nombre puis le mot en mettant éventuellement le mot au pluriel, n'affiche rien si nombre = 0 """
 
     if nombre > 1:
-        print (nombre, mot+"s")
+        print (nombre, mot+"s",end=' ')
     elif nombre == 1:
-        print (nombre,mot)
-    else:
-        print ('')
+        print (nombre,mot,end=' ')
+    
     
 
 affichePluriel (2, 'banane')
 affichePluriel (1,'pomme')
 affichePluriel (0,'poire')
+print('')
 
 def afficheTemps(temps):
     """ affichage du temps """
-    affichePluriel ( temps[0],'jour')
+    affichePluriel (temps[0],'jour')
     affichePluriel (temps[1],'heure')
     affichePluriel (temps[2],'minute')
     affichePluriel (temps[3],'seconde')
 
-afficheTemps((1,0,14,23))
+afficheTemps((2,1,0,8))
+print('')
+
+def demandeTemps():
+    """saisie d'un temps avec vérification de la validité """
+    
+    jours = int(input('choisir le nombre de jour'))
+    if jours < 0:
+        print('saisie invalide')
+        return
+    heures = int(input("choisir le nombre d'heures"))
+    if not 0 <= heures <=23:
+        print("saisie invalide")
+        return
+    minutes = int(input("choisir le nombre de minutes"))
+    if not 0 <= minutes <= 59:
+        print("saisie invalide")
+        return
+    secondes = int(input("choisir le nombre de secondes"))
+    if not 0 <= secondes <= 59:
+        print ("saisie invalide")
+        return
+   
+
+afficheTemps(demandeTemps())
+print(afficheTemps)
+
+
