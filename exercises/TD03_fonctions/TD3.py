@@ -59,4 +59,5 @@ def sommeTemps(temps1,temps2):
     secondes = seconde1 + seconde2
     return secondeEnTemps(secondes)
 
-sommeTemps((2,3,4,25),(5,22,57,1))
+sommeTemps((0,21,27,30),(0,3,59,45))
+print(sommeTemps((0,21,27,30),(0,3,59,45)))
