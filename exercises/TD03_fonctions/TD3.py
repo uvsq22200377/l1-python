@@ -48,6 +48,4 @@ def afficheTemps(temps):
     affichePluriel (temps[2],'minute')
     affichePluriel (temps[3],'seconde')
 
-    afficheTemps((1,0,14,23))
-    affichePluriel
-   
+afficheTemps((1,0,14,23))
