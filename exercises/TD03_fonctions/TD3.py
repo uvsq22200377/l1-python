@@ -49,30 +49,15 @@ def afficheTemps(temps):
     affichePluriel (temps[3],'seconde')
 
 afficheTemps((2,1,0,8))
+
 print('')
 
-def demandeTemps():
-    """saisie d'un temps avec vérification de la validité """
-    
-    jours = int(input('choisir le nombre de jour'))
-    if jours < 0:
-        print('saisie invalide')
-        return
-    heures = int(input("choisir le nombre d'heures"))
-    if not 0 <= heures <=23:
-        print("saisie invalide")
-        return
-    minutes = int(input("choisir le nombre de minutes"))
-    if not 0 <= minutes <= 59:
-        print("saisie invalide")
-        return
-    secondes = int(input("choisir le nombre de secondes"))
-    if not 0 <= secondes <= 59:
-        print ("saisie invalide")
-        return
-   
+def sommeTemps(temps1,temps2):
+    """permet d'additionner des temps"""
+    tempsEnSeconde(temps1)
+    tempsEnSeconde(temps2)
+    temps_total = temps1 + temps2
+    secondeEnTemps(temps1)
+    secondeEnTemps(temps2)
 
-afficheTemps(demandeTemps())
-print(afficheTemps)
-
-
+sommeTemps((2,3,4,25),(5,22,57,1))
