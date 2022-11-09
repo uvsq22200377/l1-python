@@ -14,13 +14,29 @@ print(tempsEnSeconde(temps))
 def secondeEnTemps(seconde):
     """Renvoie le temps (jour, heure, minute, seconde) qui correspond au nombre de seconde passé en argument"""
 
-    Secondes = seconde % 60
+    jours = seconde // (24*60*60)
+    heures = seconde // (60*60)
+    heures = heures % 24
     minutes = seconde // 60
-    minutes += seconde % 60
-    heures = seconde // 60
-    heures += seconde % 60
-    jours = seconde // 24
+    minutes = minutes % 60
+    Secondes = seconde % 60
     return (jours, heures, minutes, Secondes)
     
 temps = secondeEnTemps(100000) #temps = secondeEnTemps 
 print(temps[0],"jours",temps[1],"heures",temps[2],"minutes",temps[3],"secondes") #print (...)
+
+
+def affichePluriel(nombre,mot):
+    """ affiche le nombre puis le mot en mettant éventuellement le mot au pluriel, n'affiche rien si nombre = 0 """
+
+    if nombre > 1:
+        print (nombre, mot+"s")
+    elif nombre == 1:
+        print (nombre,mot)
+    else:
+        print ('')
+    
+
+affichePluriel (2, 'banane')
+affichePluriel (1,'pomme')
+affichePluriel (0,'poire')
