@@ -54,10 +54,9 @@ print('')
 
 def sommeTemps(temps1,temps2):
     """permet d'additionner des temps"""
-    tempsEnSeconde(temps1)
-    tempsEnSeconde(temps2)
-    temps_total = temps1 + temps2
-    secondeEnTemps(temps1)
-    secondeEnTemps(temps2)
+    seconde1 = tempsEnSeconde(temps1)
+    seconde2 = tempsEnSeconde(temps2)
+    secondes = seconde1 + seconde2
+    return secondeEnTemps(secondes)
 
 sommeTemps((2,3,4,25),(5,22,57,1))
