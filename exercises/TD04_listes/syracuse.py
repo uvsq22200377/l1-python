@@ -48,8 +48,8 @@ print(syracuse(27))
 
 # déterminer quel entier entre 1 et 10 000 à le plus grand temps de vol
 
-listeTV = tempsVolListe (10000)
-print (max(listeTV))
+listeTV = tempsVolListe(10000)
+print(max(listeTV))
 print(listeTV.index(261)+1)
 
 #ou :
@@ -62,10 +62,12 @@ for i in range (10000):
         m = e
         im = i
 print (m,im)
+
 # déterminer quel entier entre 1 et 10 000 à la plus grande altitude totale
 
-def altitudeMaxListe(n):
+def altitudeMaxListe(n_max):
+    """listes des altitudes maximales des nombres de 1 à n_max"""
     liste = []
-    for n in range (1, n+1):
-        liste.append(tempsVolListe(n))
+    for n in range (1, n_max+1):
+        liste.append(max(syracuse(n)))
     return liste
