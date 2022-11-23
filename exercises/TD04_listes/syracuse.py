@@ -52,22 +52,28 @@ listeTV = tempsVolListe(10000)
 print(max(listeTV))
 print(listeTV.index(261)+1)
 
-#ou :
+# ou :
 
 im = 0
 m = 0
-for i in range (10000):
-   e = listeTV[i]
-   if e > m:
+for i in range(10000):
+    e = listeTV[i]
+    if e > m:
         m = e
         im = i
-print (m,im)
+print(m, im)
 
 # déterminer quel entier entre 1 et 10 000 à la plus grande altitude totale
+
 
 def altitudeMaxListe(n_max):
     """listes des altitudes maximales des nombres de 1 à n_max"""
     liste = []
-    for n in range (1, n_max+1):
+    for n in range(1, n_max+1):
         liste.append(max(syracuse(n)))
     return liste
+
+
+listeAM = altitudeMaxListe(10000)
+print(max(listeAM))
+print(listeAM.index(27114424)+1)
